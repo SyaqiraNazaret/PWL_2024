@@ -80,3 +80,7 @@ Route::resource('photos', PhotoController::class)->except([
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/greeting', function () {
+    return view('blog.hello', ['name' => 'Syaqira Nazaretna']);
+});
+Route::get('/greeting', [WelcomeController::class, 'greeting']);
